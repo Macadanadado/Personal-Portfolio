@@ -16,6 +16,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-decoration: none;
 }
 
 header nav
@@ -27,13 +28,14 @@ header nav
     
 }
 
-header nav a {
+header a,
+header h2 {
     color: black;
     text-decoration: none;
 }
 
 header h2 {
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 /*Main*/
@@ -89,7 +91,7 @@ main {
 }
 
 /*Projects*/
-.projects {
+#projects {
     width: 80%;
     height: 600px;
     margin-bottom: 50px;
@@ -99,7 +101,7 @@ main {
     justify-content: space-around;
 }
 
-.projects h2 {
+#projects h2 {
     width: 100%;
     padding: 10px;
     margin-left: 30px;
@@ -203,7 +205,7 @@ main {
 .contact {
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    width: 60%;
 }
 
 .contact img{
@@ -218,6 +220,69 @@ main {
     width: 100px;
 }
 
+@media only screen and (max-width: 950px){
+    .contact {
+        width: 80%;
+    }
+}
 
+@media only screen and (max-width: 620px){
+    .contact {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 250px;
+    }
+
+    .social {
+        height: 300px;
+    }
+}
+
+
+/*Form*/
+.form-background {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('./Resources/contact-cover.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;  
+    position: relative;
+}
+
+.form-square {
+    position: absolute;
+    width: 30%;
+    height: 70%;
+    padding: 20px;
+    background-color: seashell;
+    opacity: 0.8;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    z-index: 1;
+}
+
+input,
+label,
+form textarea {
+    width: 80%;
+}
+
+ button {
+     margin: 20px;
+     width: 100px;
+     height: 50px;
+     border-radius: 10px;
+ }
 
 /* border: 1px solid red; */
